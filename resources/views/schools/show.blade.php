@@ -9,5 +9,6 @@
         <li>{{ $member->name }} - {{ $member->email }}</li>
     @endforeach
 </ul>
+<a href="{{ route('schools.index') }}" class="btn btn-primary">Back</a>
 @endsection
 

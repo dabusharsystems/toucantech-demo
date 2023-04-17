@@ -54,8 +54,7 @@
                     <a href="{{ route('members.index') }}" class="btn btn-primary">
                         Members
                     </a>
-                </div>
-                <div class="text-right">
+
                     <a href="{{ route('schools.index') }}" class="btn btn-primary">
                         Schools
                     </a>

@@ -26,6 +26,12 @@ Route::get('/members/create', [MemberController::class, 'create'])->name('member
 // Route to handle the creation of a new member
 Route::post('/members', [MemberController::class, 'store'])->name('members.store');
 
+//Route to edit members
+Route::get('/members/{member}/edit', [MemberController::class, 'edit'])->name('members.edit');
+
+//Route to delete members
+//Route::get('/members/{member}/destroy', [MemberController::class, 'destroy'])->name('members.destroy');
+
 // Route to display all members
 Route::get('/members', [MemberController::class, 'index'])->name('members.index');
 
@@ -37,3 +43,4 @@ Route::get('/schools', [SchoolController::class, 'index'])->name('schools.index'
 Route::get('/schools/create', [SchoolController::class, 'create'])->name('schools.create');
 Route::post('/schools', [SchoolController::class, 'store'])->name('schools.store');
 Route::get('/schools/{id}', [SchoolController::class,'show'])->name('schools.show');
+Route::get('/schools/{id}/edit', [MemberController::class, 'edit'])->name('schools.edit');
