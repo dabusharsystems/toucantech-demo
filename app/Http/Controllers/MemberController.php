@@ -15,6 +15,7 @@ class MemberController extends Controller
         $members = DB::table('members')
             ->join('schools', 'members.school_id', '=', 'schools.id')
             ->select('members.*', 'schools.name as school_name')
+            ->orderBy('id')
             ->get();
 
         return view('members.index', compact('members', 'school'));
@@ -45,7 +46,7 @@ class MemberController extends Controller
         $schools = $request->input('schools');
         $member->schools()->attach($schools);
 
-        return redirect()->back();
+        return redirect()->route('members.index')->with('success', 'Member created successfully.');
     }
 
 
