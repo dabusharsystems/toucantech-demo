@@ -23,7 +23,6 @@
                     <td>{{ $member->school_name }}</td>
                     <td>
                         <a href="{{ route('members.edit', $member->id) }}" class="btn btn-primary">Edit</a>
-                            <button type="submit" class="btn btn-danger">Delete</button>
                         </form>
                     </td>
                 </tr>
